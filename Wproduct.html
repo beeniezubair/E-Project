@@ -1,0 +1,916 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women's Collection</title>
+<link rel="icon" type="image/x-icon" href="images/icon.png">
+
+<!-- Bootstrap -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+<style>
+  
+  
+  body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: hidden !important; 
+  }
+
+  
+  .full-width-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+
+  /* 3. Footer Link Hover */
+  .hover-link {
+    transition: 0.3s;
+    opacity: 0.75;
+  }
+  .hover-link:hover {
+    opacity: 1 !important;
+    color: gold !important;
+    padding-left: 5px; /* Chota sa animation effect */
+  }
+/* Navbar */
+:root {
+      --brand-gold: #cfbc8e; 
+      --pure-white: #ffffff;
+    }
+
+    body {
+      background-color: var(--pure-white);
+      margin: 0;
+      font-family: 'Georgia', serif !important; 
+    }
+
+    /* ================== Navbar: Edited to Theme Color & Absolute ================== */
+    .navbar {
+      position: absolute; 
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--brand-gold) !important; 
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 25px 0;
+      padding-top: 25px !important;    
+      padding-bottom: 25px !important; 
+      font-weight: 700;
+    }
+
+    .navbar-brand img {
+      height: 100px; 
+    }
+
+    .nav-link {
+      color: #ffffff !important; 
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin: 0 15px;
+    }
+
+/* Banner */
+.banner {
+  height: 350px;
+  background: url('https://images.unsplash.com/photo-1593032465171-8dcd7f61b8d4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  position: relative;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.banner div {
+  position: relative;
+  z-index: 2;
+}
+
+/* Products */
+.product-card {
+  border: none;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.product-card img {
+  height: 280px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+.product-card:hover img {
+  transform: scale(1.1);
+}
+.product-card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Sidebar */
+.color-box {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.announcement-bar {
+      background-color: #cfbc8e; 
+      color: #ffffff;
+      overflow: hidden;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .marquee-content {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+
+    .marquee-item {
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0 40px;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+/* Footer */
+footer {
+  background-color: #bca675;
+  color: #ffffff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <!-- Logo + Title -->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand m-0 p-0" href="#">
+        <img src="images/newlogo2.png" alt="Gracious Garments" style="height:50px;">
+      </a>
+      <h2 style="margin-left:10px; color: rgb(80, 78, 55); font-size:22px; margin-bottom:0;">
+        Gracious Garments
+      </h2>
+    </div>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="bi bi-list" style="color: black; font-size: 28px;"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center">
+
+        <li class="nav-item">
+          <a class="nav-link px-3" href="index.html">HOME</a>
+        </li>
+
+        <!-- MEN Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3" href="#" id="menDropdown" role="button" data-bs-toggle="dropdown">
+            MEN
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mproduct.html">All Products</a></li>
+            <li><a class="dropdown-item" href="breakout.html">BREAKOUT</a></li>
+            <li><a class="dropdown-item" href="outfitters.html">OUTFITTERS</a></li>
+            <li><a class="dropdown-item" href="one.html">ONE</a></li>
+          </ul>
+        </li>
+
+        <!-- WOMEN Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3" href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown">
+            WOMEN
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Wproduct.html">All Products</a></li>
+            <li><a class="dropdown-item" href="wewear.html">WE WEAR</a></li>
+            <li><a class="dropdown-item" href="shein.html">SHEIN</a></li>
+            <li><a class="dropdown-item" href="engine.html">ENGINE</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link px-3" href="contact.html">CONTACT</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Image --> <img src="images/baner1.png" class="w-100 banner-img"> <!-- Overlay Text --> <div class="banner-text d-flex align-items-center justify-content-center text-center"> <div class="text-white"> <h5 class="fw-bold display-4">WOMEN SUITS</h5> <p>Elegance in Every Stitch</p> </div> </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<h2 class="text-center mt-5" style="color: #cfbc8e; font-weight: bold; letter-spacing: 2px;">OUR PRODUCTS</h2>
+<div class="container my-4">        
+    <!-- Filter Buttons -->
+    <div class="mb-3">
+        <button class="btn btn-primary filter-btn" data-filter="all">All</button>
+        <button class="btn btn-secondary filter-btn" data-filter="clothes">Co-ord Sets</button>
+        <button class="btn btn-secondary filter-btn" data-filter="shoes">Tops</button>
+        <button class="btn btn-secondary filter-btn" data-filter="accessories">Bottoms</button>
+    </div>
+    <!-- Products Grid -->
+    <div class="row" id="women-products">
+        
+        <div class="col-md-4 mb-3 filter-item" data-category="shoes">
+            <div class="card">
+                <div class="card-body">Engine</div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 filter-item" data-category="accessories">
+            <div class="card">
+                <div class="card-body">We Wear</div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 filter-item" data-category="accessories">
+            <div class="card">
+                <div class="card-body">Shein</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cards -->    
+<div class="container" style="margin-top: 30px; margin-bottom: 80px;">
+  <div class="row g-4"> 
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card1 (2).webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Button Down Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,400</p>
+          <a href="pro1.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card4 (1).webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Button Down Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,800</p>
+          <a href="pro2.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card4 (2).webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Suit</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,000</p>
+          <a href="pro3.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card4 (3).webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,999</p>
+          <a href="pro4.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card5.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Button Down Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,000 </p>
+          <a href="pro5.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card6.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,000</p>
+          <a href="pro6.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card7.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Suit</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 4,000</p>
+          <a href="pro7.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card8.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Suit</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 5,000</p>
+          <a href="pro8.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card9.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Suit</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 5,500</p>
+          <a href="pro9.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card10.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Suit</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 4,000</p>
+          <a href="pro10.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card11.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,499</p>
+          <a href="pro11.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card12.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Suit</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 4,499</p>
+          <a href="pro12.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card2.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,499 </p>
+          <a href="pro13.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card14.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,000</p>
+          <a href="pro14.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card15.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Long Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 7,499</p>
+          <a href="pro15.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card16.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Printed Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 4,199</p>
+          <a href="pro16.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card17.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Printed Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,899</p>
+          <a href="pro17.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card18.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Printed Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 4,199</p>
+          <a href="pro18.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card19.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,699</p>
+          <a href="pro19.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card20.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,999</p>
+          <a href="pro20.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card21.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Suit</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 5,999</p>
+          <a href="pro21.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card22.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Panel Sweatshirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,000</p>
+          <a href="pro22.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card23.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Graphic Sweatshirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,650</p>
+          <a href="pro23.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card24.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Basic Sweatshirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,250</p>
+          <a href="pro24.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card25.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Button Down Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,500</p>
+          <a href="pro25.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card26.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,000</p>
+          <a href="pro26.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card27.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Mid-Length Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,900</p>
+          <a href="pro27.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card28.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Striper Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,499</p>
+          <a href="pro28.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card29.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,000</p>
+          <a href="pro29.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card30.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,500</p>
+          <a href="pro30.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card31.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,699</p>
+          <a href="pro31.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card32.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Basic Sweatshirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,500</p>
+          <a href="pro32.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card33.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Basic Sweatshirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 2,500</p>
+          <a href="pro33.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card34.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Printed Top</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,649</p>
+          <a href="pro34.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card35.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women T Shirt</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 1,750</p>
+          <a href="pro35.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm" 
+           onmouseover="this.style.boxShadow='0 10px 20px rgba(200, 157, 60, 0.2)'; this.style.transform='translateY(-5px)';" 
+           onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+           style="border: 1px solid #cfbc8e; border-radius: 0; background: #fff; transition: 0.4s; overflow: hidden;">
+        <img src="women/card36.webp" class="card-img-top" alt="Product" style="height: 400px; object-fit: cover; border-radius: 0;">
+        <div class="card-body text-center" style="padding: 25px;">
+          <h5 class="card-title" style="color: #cfbc8e; font-weight: bold; letter-spacing: 1px; font-family: 'Georgia', serif;">Women Dress</h5>
+          <p class="card-text" style="color: #666; font-size: 0.9rem; font-style: italic;">PKR 3,000</p>
+          <a href="pro36.html" class="btn" style="background-color: #cfbc8e; color: white; border-radius: 0; font-weight: bold; padding: 10px 30px; display: inline-block; text-decoration: none; width: 100%; transition: 0.3s;">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+</div> 
+
+    <!-- Slide -->
+<div class="announcement-bar">
+  <div class="marquee-content">
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+    <div class="marquee-item">Free Shipping On All Orders</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="container-fluid py-5" style="background-color: #fdfaf3; border-top: 1px solid #bca675; margin-top: 60px;">
+    <div class="row text-center g-0 m-0">
+        <div class="col-6 col-md-3">
+            <i class="bi bi-truck" style="font-size: 2.2rem; color: #a6905b;"></i>
+            <h6 class="fw-bold mt-3 mb-1">WORLDWIDE SHIPPING</h6>
+            <p class="text-muted small">Free Shipping On All Orders</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="bi bi-shield-check" style="font-size: 2.2rem; color: #a6905b;"></i>
+            <h6 class="fw-bold mt-3 mb-1">SECURE PAYMENT</h6>
+            <p class="text-muted small">100% safe payment processing</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="bi bi-gem" style="font-size: 2.2rem; color: #a6905b;"></i>
+            <h6 class="fw-bold mt-3 mb-1">PREMIUM QUALITY</h6>
+            <p class="text-muted small">Crafted with finest fabrics</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="bi bi-arrow-counterclockwise" style="font-size: 2.2rem; color: #a6905b;"></i>
+            <h6 class="fw-bold mt-3 mb-1">EASY RETURNS</h6>
+            <p class="text-muted small">30-day hassle-free returns</p>
+        </div>
+    </div>
+</div>
+  </div>
+</div>
+
+
+<footer class="container-fluid px-0" style="background-color: #bca675; color: #ffffff; padding: 80px 0 40px 0; font-family: 'Georgia', serif;">
+    <div class="container"> 
+        <div class="row g-4 m-0">
+            
+            <div class="col-6 col-lg-2">
+                <h6 class="fw-bold mb-4" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.3); display: inline-block; padding-bottom: 5px;">SHOP</h6>
+                <ul class="list-unstyled mt-2">
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-white small opacity-75 hover-link">New Arrivals</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-white small opacity-75 hover-link">Best Sellers</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-white small opacity-75 hover-link">Men's Collection</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-5 ms-auto">
+                <h6 class="fw-bold mb-3">JOIN THE ELITE LIST</h6>
+                <p class="text-white small mb-4 opacity-75">Subscribe for exclusive deals.</p>
+                <form class="d-flex mb-4" style="height: 55px;">
+                    <input type="email" class="form-control" placeholder="Enter your email..." 
+                           style="border-radius: 0; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; box-shadow: none;">
+                    <button class="btn" type="submit" style="background-color: #2c3e50; color: #ffffff; border-radius: 0; padding: 0 30px;">JOIN</button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="my-5" style="border-color: rgba(255,255,255,0.2);">
+
+        <div class="row align-items-center g-0 m-0">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="small mb-0 opacity-50">© 2026 Gracious Garments.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                 <i class="bi bi-credit-card-2-back me-2 opacity-50"></i>
+                 <i class="bi bi-paypal me-2 opacity-50"></i>
+                 <i class="bi bi-apple opacity-50"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+const row = document.getElementById("productRow");
+
+for(let i=1; i<=36; i++){
+  row.innerHTML += `
+  <div class="col-md-4 col-sm-6">
+    <div class="card product-card">
+      <img src="https://source.unsplash.com/400x500/?suit,men&sig=${i}" class="card-img-top">
+      <div class="card-body text-center">
+        <h6 class="fw-bold">Premium Suit ${i}</h6>
+        <p class="text-muted">Rs. ${10000 + i*200}</p>
+        <button class="btn btn-dark w-100">Add to Cart</button>
+      </div>
+    </div>
+  </div>`;
+}
+(function($){
+    $.fn.simpleFilter = function(options){
+        var settings = $.extend({
+            btnSelector: '.filter-btn',
+            itemSelector: '.filter-item',
+            categoryAttr: 'data-category',
+            activeClass: 'btn-primary'
+        }, options);
+
+        var container = this;
+
+        $(settings.btnSelector).on('click', function(){
+            var filter = $(this).data('filter');
+
+            $(settings.btnSelector).removeClass(settings.activeClass).addClass('btn-secondary');
+            $(this).removeClass('btn-secondary').addClass(settings.activeClass);
+
+            if(filter === 'all'){
+                container.find(settings.itemSelector).fadeIn();
+            } else {
+                container.find(settings.itemSelector).fadeOut(200)
+                         .filter(function(){
+                             return $(this).attr(settings.categoryAttr) === filter;
+                         }).fadeIn(200);
+            }
+        });
+
+        return this;
+    };
+}(jQuery));
+
+// Initialize the plugin
+$(document).ready(function(){
+    $('#women-products').simpleFilter();
+});
+</script>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+    
